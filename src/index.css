@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.home-page {
+  width: 90vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.home-outer-container {
+  z-index: -1;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+}
+.home-inner-container {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: black;
+  /* line-height: 3rem; */
+  /* background-color: aqua; */
+  padding: 3.5rem;
+}
+
+.home_head {
+  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  font-size: 4em;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.home_subhead {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+
+}
+.home_btn {
+  padding: 0.5rem 7rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.5s all;
+  opacity: 1;
+}
+
+.home_btn:hover {
+  color: white;
+  background-color: black;
+  /* border: 1px solid white; */
+}
+
+
+
+
+#blob {
+  z-index: 1;
+  height: 350px;
+  /* width: 300px; */
+  aspect-ratio: 1;
+  overflow-x:hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+      to right,
+      aquamarine,
+      mediumpurple
+  );
+  animation: moveAndRotate 20s linear infinite;
+}
+@keyframes moveAndRotate {
+  0% {
+      left: 0;
+      top: 50%;
+      transform: translateX(0) translateY(-50%) rotate(0deg);
+  }
+  40% {
+      left: 10%;
+      top: 30%;
+      transform: translateX(0) translateY(-50%) rotate(0deg);
+  }
+  50% {
+      left: 25%;
+      top: 45%;
+      transform: translateX(0) translateY(-50%) rotate(0deg);
+  }
+  60% {
+      left: 40%;
+      top: 60%;
+      transform: translateX(0) translateY(-50%) rotate(0deg);
+  }
+  100% {
+      left: 95%;
+      top: 50%;
+      transform: translateX(-100%) translateY(-50%) rotate(360deg);
+  }
+}
+#blur {
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  /* background-color: antiquewhite; */
+  backdrop-filter: blur(100px);
+}
