@@ -50,11 +50,11 @@ const Signup = () => {
             <div className="flex flex-col gap-6 mt-[12%] mr-[15%] w-[60vh]">
                 <div className="text-5xl font-mono text-black text-center mb-6">Signup</div>
                 <div className="text-2xl text-black mr-32">Username</div>
-                <input name="username" className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
+                <input name="username" value={register.username} onChange={handleRegister} className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
                 <div className="text-2xl text-black mr-32">My Name is</div>
-                <input name="fullname" className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
+                <input name="fullname" value={register.fullname} onChange={handleRegister} className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
                 <div className="text-2xl text-black mr-32">I Study in</div>
-                <select name="inWhat" onClick={setCoOrSc} value={register.inWhat} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' defaultValue="">
+                <select name="inWhat" onClick={setCoOrSc} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' defaultValue="">
                     <option value=""></option>
                     <option value="school">school</option>
                     <option value="college">college</option>

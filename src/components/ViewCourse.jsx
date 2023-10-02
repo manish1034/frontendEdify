@@ -60,11 +60,11 @@ const ViewCourse = () => {
     getCollegeData();
   }, [schoolClass, collegeCourse]);
 
-  // console.log(
-  //   college.map((item) =>
-  //     item[0].subjects.map((item) => item.videos.map((item) => item))
-  //   )
-  // );
+  console.log(
+    school.map((item) =>
+      item[0].subjects.map(item=>item.chapter).map(item=>item.chapternumber)
+    )
+  );
 //   const SchoolCourse = () => {
 //     return (
 //       <div>
@@ -111,12 +111,6 @@ const ViewCourse = () => {
   const SchoolCourse = () => {
     return (
       <div>
-        {/* <div className=" relative my-40 flex flex-col justify-center">
-          <h1 className=" text-[20px] font-semibold font-mono">
-            it is our pleasure to work with you and make your college journey
-            fun and memorable
-          </h1>
-        </div> */}
         <div className="relative mt-[12%]">
           <span className="font-mono text-start ml-20 text-5xl">
             Let's take one step forward towards... <br/> 
@@ -132,7 +126,7 @@ const ViewCourse = () => {
                   className="flex-[5] bg-[rgb(249,249,245)] mx-3 my-2 p-5 text-black/80 text-xl rounded-sm"
                 >
                     <Accordion title={item.subjectname}>
-                        {item.videos.map((item, index) => (
+                        {item[0].chapter.map((item, index) => (
                         <div
                             key={index}
                             className="flex bg-white m-2 my-6 p-2 rounded-2xl cursor-pointer text-blue-600"
