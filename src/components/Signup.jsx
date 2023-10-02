@@ -32,7 +32,7 @@ const Signup = () => {
         event.preventDefault();
         const {username,fullname,inWhat,course,email,password,cPass} = register;
         try {
-            const response = await axios.post('/auth/register', {username,fullname,inWhat,course,email,password,cPass});
+            const response = await axios.post('http://localhost:8800/auth/register', {username,fullname,inWhat,course,email,password,cPass});
             navigate('/login');
         } catch (error) {
             console.log("not able to register");
