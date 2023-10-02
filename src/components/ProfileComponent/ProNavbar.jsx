@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ProNavbar = () => {
   return (
     <div className="sticky top-[20%] ml-3 mb-52">
-        <div className="relative h-[41vh] w-[15%] bg-inherit border-r-[0.1px] border-black/60">
+        <div className="h-[41vh] w-[15%] bg-inherit border-r-[0.1px] border-black/60">
             <div className="flex flex-col items-start ml-7">
                 <div className="hover:border-y-[0.1px] hover:border-black/70 w-[90%] p-4 cursor-pointer">
                     <Link to='/profile'>Profile</Link>

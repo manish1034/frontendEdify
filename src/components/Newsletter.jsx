@@ -14,7 +14,7 @@ const Newsletter = () => {
             </div>
             <div className="flex flex-col bottom-[4.9rem] -mt-[8rem] gap-3 mb-14">
                 <input className="h-10 w-[615px] bg-transparent rounded-[0.75rem] border-[0.5px] p-4 text-white/40" placeholder="Email"></input>
-                <button className="h-10 w-[615px] bg-white/80  rounded-[0.75rem] border-[0.5px] hover:bg-white/40 hover:text-white/90">Submit</button>
+                <button className="h-10 w-[615px] bg-white/80 rounded-[0.75rem] border-[0.5px] hover:bg-transparent hover:text-white">Submit</button>
             </div>
         </div>
     </Parallax>
