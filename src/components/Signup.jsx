@@ -11,7 +11,8 @@ const Signup = () => {
         username : '',
         fullname : '',
         inWhat : '',
-        course : '',
+        schoolstudent : '',
+        collegestudent : '',
         email : '',
         password : '',
         cPass : ''
@@ -30,9 +31,9 @@ const Signup = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const {username,fullname,inWhat,course,email,password,cPass} = register;
+        const {username,fullname,inWhat,schoolstudent,collegestudent,email,password,cPass} = register;
         try {
-            const response = await axios.post('http://localhost:8800/auth/register', {username,fullname,inWhat,course,email,password,cPass});
+            const response = await axios.post('http://localhost:8800/auth/register', {username,fullname,inWhat,schoolstudent,collegestudent,email,password,cPass});
             navigate('/login');
         } catch (error) {
             console.log("not able to register");
@@ -54,14 +55,14 @@ const Signup = () => {
                 <div className="text-2xl text-black mr-32">My Name is</div>
                 <input name="fullname" value={register.fullname} onChange={handleRegister} className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
                 <div className="text-2xl text-black mr-32">I Study in</div>
-                <select name="inWhat" onClick={setCoOrSc} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' defaultValue="">
+                <select name="inWhat" defaultValue="" onClick={setCoOrSc} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' >
                     <option value=""></option>
                     <option value="school">school</option>
                     <option value="college">college</option>
                 </select>
                 <div className="text-2xl text-black mr-32">Courses</div>
                 { In === 'school' ? (
-                    <select name="course" value={register.course} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' defaultValue="">
+                    <select name="schoolstudent" defaultValue="" onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none'>
                         <option value=""></option>
                         <option value="6">6th</option>
                         <option value="7">7th</option>
@@ -72,10 +73,10 @@ const Signup = () => {
                         <option value="12">12th</option>
                     </select>
                 ) : (
-                    <select name="course" value={register.course} onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' defaultValue="">
+                    <select name="collegestudent" defaultValue="" onChange={handleRegister} className='w-full bg-transparent border-b-[1px] border-black -mt-3 text-[18px] font-semibold focus:outline-none' >
                         <option value=""></option>
                         <option value="Btech">B.Tech</option>
-                        <option value="BSc">B.Sc</option>
+                        <option value="Bsc">B.Sc</option>
                     </select>
                 )}
                 <div className="text-2xl text-black mr-32">This is my Email</div>
