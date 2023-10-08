@@ -143,3 +143,8 @@
   /* background-color: antiquewhite; */
   backdrop-filter: blur(100px);
 }
+
+.bgCourse {
+  background: rgb(40,59,102);
+background: linear-gradient(90deg, rgba(40,59,102,1) 19%, rgba(48,89,182,1) 100%, rgba(40,59,102,1) 100%);
+}

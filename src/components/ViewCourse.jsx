@@ -60,11 +60,11 @@ const ViewCourse = () => {
     getCollegeData();
   }, [schoolClass, collegeCourse]);
 
-  console.log(
-    school.map((item) =>
-      item[0].subjects.map(item=>item.chapter).map(item=>item.chapternumber)
-    )
-  );
+  // console.log(
+  //   school.map((item) =>
+  //     item[0].subjects.map(item=>item.chapter[0]).map(item=>item.videos)
+  //   )
+  // );
 //   const SchoolCourse = () => {
 //     return (
 //       <div>
@@ -118,7 +118,21 @@ const ViewCourse = () => {
           <div className="ml-20 p-3 italic mb-10 mt-2 font-mono text-6xl text-[rgb(46,81,167)]">LEARNING!!</div>
         </div>
         <div className=" flex flex-col relative w-[90%] left-16 mb-8">
-          {school.length > 0 ? (
+        {school.length > 0 ? (
+            school.map((item) =>
+              item[0].subjects.map((item, index) => (
+                
+                <Accordion key={index} title={item.subjectname}>
+                {item.chapter.map((item) => item.videos[0]).map((item, index) => (
+                  <Accordion key={index} title={item.url}></Accordion>
+                ))}
+                </Accordion>
+              ))
+            )
+          ) : (
+            <p>...</p>
+          )}
+          {/* {school.length > 0 ? (
             school.map((item) =>
               item[0].subjects.map((item, index) => (
                 <div
@@ -126,12 +140,12 @@ const ViewCourse = () => {
                   className="flex-[5] bg-[rgb(249,249,245)] mx-3 my-2 p-5 text-black/80 text-xl rounded-sm"
                 >
                     <Accordion title={item.subjectname}>
-                        {item[0].chapter.map((item, index) => (
+                        {item.chapter[0].map((item, index) => (
                         <div
                             key={index}
                             className="flex bg-white m-2 my-6 p-2 rounded-2xl cursor-pointer text-blue-600"
                         >
-                            {/* Left-VideoSection */}
+                            Left-VideoSection
                             <div className="p-4 mr-[5rem] ml-10 rounded-md mb-5 mt-4">
                                 <iframe className="m-0 rounded-lg shadow-black shadow-md"
                                     width="590"
@@ -142,7 +156,7 @@ const ViewCourse = () => {
                                     allowFullScreen
                                 />
                             </div>
-                            {/* right-NoteSection */}
+                            right-NoteSection
                             <div className="relative right-0 mb-5 mt-3">
                                 <div className="border-b-[2px] border-r-[2px] border-grey shadow-xl">
                                     <TextField
@@ -176,7 +190,7 @@ const ViewCourse = () => {
             )
           ) : (
             <p>...</p>
-          )}
+          )} */}
         </div>
       </div>
     );
@@ -245,17 +259,17 @@ const ViewCourse = () => {
                                     variant="standard"
                                     />
                                 </div>
-                                <div className="relative left-[15.7rem] bg-black/80 text-white h-[3rem] w-[10rem] cursor-pointer mt-[2.7rem] rounded-md hover:bg-white border-b-[2px] border-r-[2px] shadow-md shadow-grey">
-                                    <h2 className="text-white font-sans p-[0.6rem] pl-9 hover:text-black/90">Save as Pdf</h2>
+                                <div className="relative left-[15.7rem] bg-black/80 text-white h-[3rem] w-[10rem] cursor-pointer mt-[2.7rem] rounded-md hover:bg-white shadow-lg shadow-gray-600">
+                                    <h2 className="text-white font-sans p-[0.6rem] pl-9 hover:text-black/90  rounded-md">Save as Pdf</h2>
                                 </div>
                             </div>
                         </div>
                         ))}
                         <div className=" flex flex-row justify-between items-center">
-                        <div className="bg-white m-2 px-4 py-2 text-lg rounded-lg cursor-pointer text-black/80 font-sans font-normal hover:bg-black/80 hover:text-white/80">
+                        <div className="bg-white m-2 px-4 py-2 text-lg rounded-lg cursor-pointer text-black/80 font-sans font-normal hover:bg-black/80 hover:text-white/80 shadow-xl">
                             Notes
                         </div>
-                        <div className="bg-white mr-2 px-4 py-2 text-lg rounded-lg cursor-pointer text-black/80 font-sans font-normal hover:bg-black/80 hover:text-white/80">
+                        <div className="bg-white mr-2 px-4 py-2 text-lg rounded-lg cursor-pointer text-black/80 font-sans font-normal hover:bg-black/80 hover:text-white/80 shadow-xl">
                             Take Tests
                         </div>
                         </div>
@@ -263,9 +277,7 @@ const ViewCourse = () => {
                 </div>
               ))
             )
-          ) : (
-            <p>...</p>
-          )}
+          ) : ""}
         </div>
       </div>
     );

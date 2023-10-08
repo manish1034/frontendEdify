@@ -1,5 +1,5 @@
 import paraImg from "./prallaximg.jpg";
-import login from "./login.svg";
+import login2 from "./login.svg";
 import signup from "./signup.jpg";
 import about1 from "./about1.jpg";
 import about2 from "./about2.jpg";
@@ -9,4 +9,4 @@ import boy2 from "./boy2.jpg";
 import boy3 from "./boy3.jpg";
 
 
-export { paraImg, login, signup, about1, about2, about3, boy1, boy2, boy3 };
+export { paraImg, login2, signup, about1, about2, about3, boy1, boy2, boy3 };

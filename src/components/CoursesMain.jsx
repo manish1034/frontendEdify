@@ -58,8 +58,10 @@ const Courses = () => {
                 {allCourses.map((item,index) => (
                     <Tilt key={index} options={{ scale: 1 }}>
                     <Zoom in={course}>
-                        <div className="h-[13rem] w-[15rem] bg-[rgb(40,59,102)] ml-4 rounded-2xl cursor-pointer shadow-lg shadow-slate-500">
-                            <div className="text-center overflow-hidden p-5 pt-20 text-white/80 text-lg">{item}</div>
+                        <div className="h-[13rem] w-[15rem] bgCourse ml-4 rounded-2xl cursor-pointer shadow-lg shadow-slate-500">
+                            <div className="overflow-hidden mr-2 text-center text-white/80 text-lg">
+                              <h1 className=" mt-20 px-5">{item}</h1>
+                            </div>
                         </div>
                     </Zoom>
                     </Tilt>

@@ -3,7 +3,7 @@ import { AiFillInstagram, AiFillTwitterCircle, AiFillLinkedin } from "react-icon
 
 const EditProfile = () => {
   return (
-    <>
+    <div className="min-h-[calc(100vh)]">
         <ProNavbar/>
         {/* left */}
         <div className="relative left-[16%] -mt-[22rem] h-[88vh] w-[26vw]  border-r-[0.1px] border-r-black/60">
@@ -25,7 +25,11 @@ const EditProfile = () => {
             <label>Username</label>
             <input className="border-[1px] pl-2 -mt-2 pt-1 pb-1 rounded-lg" placeholder="amitsr26"/>
             <label>Pronoun</label>
-            <input className="border-[1px] pl-2 -mt-2 pt-1 pb-1 rounded-lg" placeholder="He/they"/>
+            <select className="border-[1px] pl-2 -mt-2 pt-1 pb-1 rounded-lg" defaultValue="">
+              <option value=""></option>
+              <option value="He/They">He/they</option>
+              <option value="She/Her">She/her</option>
+            </select>
             <label>Bio</label>
             <textarea className="border-[1px] pl-2 -mt-2 pt-1 pb-1 rounded-lg" placeholder="A junior software engineer (student) with good catch in C++ and Web Development." rows='4'/>
             <label>Email</label>
@@ -44,7 +48,7 @@ const EditProfile = () => {
           </div>
         </div>
         {/* extremeRight */}
-        <div className="relative left-[75%] h-[100%] w-full -mt-[55rem]">
+        <div className="relative left-[75%] h-[100%] w-[20rem] -mt-[55rem]">
           <div className="flex flex-col justify-start gap-4">
             <h1 className="text-2xl">Basic Details</h1>
             <div className="flex gap-5 cursor-pointer">
@@ -68,7 +72,7 @@ const EditProfile = () => {
             
           </div>
         </div>
-    </>
+    </div>
   )
 }
 
