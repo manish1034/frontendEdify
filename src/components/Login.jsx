@@ -35,7 +35,7 @@ const Login = () => {
       };
 
     return (
-        <div className="relative bg-[rgb(242,241,236)] flex flex-row justify-around rounded-b-3xl mb-20">
+        <div className="relative bg-[rgb(242,241,236)] flex flex-row justify-around rounded-b-3xl">
 
             {/* Left */}
             <div className="mt-[8%] mr-[8rem]">
@@ -50,7 +50,7 @@ const Login = () => {
                 <div className="text-2xl text-black mr-32">This is my Password</div>
                 <input type="password" name="password" onChange={handleLogin} value={login.password} className="border-b-[1px] border-black bg-[rgb(242,241,236)] -mt-3 focus:outline-none" ></input>
                 <button onClick={handleSubmit} className="bg-black rounded-lg h-12 text-white">Login</button>    
-                <h1 className="text-black/60 text-center text-lg font-sans cursor-pointer hover:underline text-blue-600">Not a member!?
+                <h1 className="text-black/60 text-center text-lg font-sans cursor-pointer hover:underline">Not a member!?
                     <span className="cursor-pointer  text-lg font-sans">
                         <Link to='/signup'> Signup</Link>
                     </span>

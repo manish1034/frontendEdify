@@ -40,7 +40,7 @@ const Signup = () => {
         }
       };
     return (
-        <div className="relative bg-[rgb(242,241,236)] flex flex-row justify-around rounded-b-3xl mb-20 h-[160vh]">
+        <div className="relative bg-[rgb(242,241,236)] flex flex-row justify-around rounded-b-3xl h-[160vh]">
 
             {/* Left */}
             <div className="mt-[16%] mr-[5rem] p-8">

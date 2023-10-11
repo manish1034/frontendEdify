@@ -67,7 +67,7 @@ const EditProfile = () => {
     event.preventDefault();
     try {
       const response = await axios.put(
-        http://localhost:8800/update/${userData._id},
+        `http://localhost:8800/update/${userData._id}`,
         {
           ...userData,
           ...editData,

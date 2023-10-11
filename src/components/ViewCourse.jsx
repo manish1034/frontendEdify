@@ -260,7 +260,7 @@ const ViewCourse = () => {
                                     />
                                 </div>
                                 <div className="relative left-[15.7rem] bg-black/80 text-white h-[3rem] w-[10rem] cursor-pointer mt-[2.7rem] rounded-md hover:bg-white shadow-lg shadow-gray-600">
-                                    <h2 className="text-white font-sans p-[0.6rem] pl-9 hover:text-black/90  rounded-md">Save as Pdf</h2>
+                                    <h2 className="text-white font-sans p-[0.6rem] pl-9 hover:text-black/90 rounded-md">Save as Pdf</h2>
                                 </div>
                             </div>
                         </div>
