@@ -2,7 +2,7 @@ import ProNavbar from "./ProNavbar";
 
 const Profile = () => {
   return (
-    <div className="min-h-[calc(100vh)]">
+    <div className="h-full">
         <ProNavbar/>
         {/* left */}
         <div className="relative left-[16%] -mt-[22rem] h-[88vh] w-[26vw]  border-r-[0.1px] border-r-black/60">
